@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+
+<body>
+
+</body>
+
+<script>
+    const body = document.body;
+    console.log('body', body)
+    const voiceList = [
+        // 羊
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/202008/13266.mp3',
+        // 牛
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/202003/12608.mp3',
+        // 马
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/201503/5614.mp3',
+        // 牧羊犬
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/201311/3771.mp3',
+        // 小猫叫
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/202204/y797.mp3',
+        // 小猫叫2
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/202203/y751.mp3',
+        // 小猫叫3
+        'https://downsc.chinaz.net/Files/DownLoad/sound1/202103/s1069.mp3'
+
+    ]
+    let audio = new Audio();
+    body.onclick = () => {
+        audio.pause();
+        const index = Math.floor(Math.random() * voiceList.length)
+        console.log('index', index)
+        audio.src = voiceList[index];
+        audio.play();
+    }
+
+</script>
+
+</html>
